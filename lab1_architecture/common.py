@@ -8,7 +8,8 @@ my_col = my_db["collection"]
 
 
 def print_catalogue(tmp_catalogue):
-    print("\t{0:20s} {1:40s}". format(tmp_catalogue['Name'], tmp_catalogue['Phone_number']))
+    print("\t{0:20s} {1:40s}". format(tmp_catalogue['Name'],
+                                      tmp_catalogue['Phone_number']))
 
 
 def get_dict(_dict, count):

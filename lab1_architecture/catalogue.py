@@ -1,4 +1,4 @@
-from source import menu
+import source
 
 
-menu()
+source.menu()

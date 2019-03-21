@@ -1,16 +1,17 @@
 #!/bin/bash
 
-echo "  PYFLAKES TESTS:"
+echo "      PYFLAKES TESTS:"
 echo "common.py"
 pyflakes common.py
 echo "source.py"
 pyflakes source.py
 echo "catalogue.py"
 pyflakes catalogue.py
-echo "  PEP8 TESTS:"
+
+echo "      PYCODESTYLE (PEP8) TESTS:"
 echo "common.py"
-pep8 common.py
+pycodestyle common.py
 echo "source.py"
-pep8 source.py
+pycodestyle source.py
 echo "catalogue.py"
-pep8 catalogue.py
+pycodestyle catalogue.py
