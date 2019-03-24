@@ -11,4 +11,4 @@ def menu():
         document = list(com.my_col.find())
         catalogue = {}
         com.print_cond(document, catalogue)
-        choice = com.switch(document, catalogue, choice)
+        choice = com.switch(document, catalogue)

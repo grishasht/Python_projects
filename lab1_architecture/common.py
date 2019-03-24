@@ -15,11 +15,25 @@ def print_catalogue(tmp_catalogue):
 
 def get_dict(_dict, count):
     # Remake MongoDB document to dict
+    """
+    >>> get_dict([{'Name': "Grisha"}, {'Phone': "0501234567"}], 1)
+    {'Phone': '0501234567'}
+    >>> get_dict([{'Name': "Grisha"}, {'Phone': "0501234567"}], 0)
+    {'Name': 'Grisha'}
+    >>> get_dict([{'Name': "Grisha"}, {'Phone': "0501234567"}, {'Name': 'Hennadiy'}], 2)
+    {'Name': 'Hennadiy'}
+    """
     return dict(_dict[count])
 
 
 def del_catalogue_elem(tmp, tmp_catalogue):
     # Removes phone catalogue item
+    """
+    >>> del_catalogue_elem("Grisha", {"Name": "Grisha"})
+    True
+    >>> del_catalogue_elem("Heorhii", {'Name': "Andrew"})
+    False
+    """
     return True if tmp_catalogue['Name'] == tmp else False
 
 
@@ -69,7 +83,7 @@ def prog_exit():
     os.system('clear')
 
 
-def switch(document, catalogue, var):
+def switch(document, catalogue):
     # Condition function.
     # Depending on menu input implements program algorithms
     var = int(input(" Your choise: "))
