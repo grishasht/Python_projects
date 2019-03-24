@@ -8,19 +8,23 @@ my_col = my_db["collection"]
 
 
 def print_catalogue(tmp_catalogue):
+    # Prints phone catalogue on users console
     print("\t{0:20s} {1:40s}". format(tmp_catalogue['Name'],
                                       tmp_catalogue['Phone_number']))
 
 
 def get_dict(_dict, count):
+    # Remake MongoDB document to dict
     return dict(_dict[count])
 
 
 def del_catalogue_elem(tmp, tmp_catalogue):
+    # Removes phone catalogue item
     return True if tmp_catalogue['Name'] == tmp else False
 
 
-def show_catalogue(document, catalogue):
+def show_catalogue(document):
+    # Prints catalogue from MongoDB document
     print(" Catalogue:")
     i = 0
     while i < len(document):
@@ -31,21 +35,24 @@ def show_catalogue(document, catalogue):
 
 
 def print_cond(document, catalogue):
+    # Prints phone catalogue if its not empty
     if not list(document):
         print(" Catalogue is empty!")
     else:
-        show_catalogue(document, catalogue)
+        show_catalogue(document)
     print()
 
 
-def choise1(catalogue):
+def choice1(catalogue):
+    # Input new item to phone catalogue
     catalogue = {'Name': input(" Write name and surname: "),
                  'Phone_number': input(" Write phone number: ")}
     my_col.insert_one(catalogue)
     input()
 
 
-def choise2(document, catalogue):
+def choice2(document, catalogue):
+    # Removes item from phone catalogue
     if not document:
         print(" Catalogue is empty, nothing to remove!")
     del_name = input(" Write name of person who you want to remove: ")
@@ -56,17 +63,20 @@ def choise2(document, catalogue):
 
 
 def prog_exit():
+    # Prints program exit and clears terminal
     print(" Exit\n")
     input()
     os.system('clear')
 
 
 def switch(document, catalogue, var):
+    # Condition function.
+    # Depending on menu input implements program algorithms
     var = int(input(" Your choise: "))
     if var == 1:
-        choise1(catalogue)
+        choice1(catalogue)
     if var == 2:
-        choise2(document, catalogue)
+        choice2(document, catalogue)
     if var == 0:
         prog_exit()
         return 0

@@ -5,6 +5,8 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="common" />
+          <option value="lab1_architecture.catalogue.source" />
+          <option value="source" />
         </list>
       </option>
     </inspection_tool>

@@ -1,3 +1,5 @@
 #!/bin/bash
+# Run program script
+# Just write ./run in terminal to start using phone catalogue program
 
 python3 catalogue.py

@@ -1,4 +1,6 @@
 #!/bin/bash
+# Run PyFlakes and PEP8 tests.
+# Just write ./runtest in terminal to test program
 
 echo "      PYFLAKES TESTS:"
 echo "common.py"
