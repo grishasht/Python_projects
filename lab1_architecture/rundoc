@@ -1,0 +1,9 @@
+#!/bin/bash
+# Run doc tests script
+
+echo "      COMMON.PY"
+python3 -m doctest -v common.py
+echo "      SOURCE.PY"
+python3 -m doctest -v source.py
+#echo "      CATALOGUE.PY"
+#python3 -m doctest -v catalogue.py
